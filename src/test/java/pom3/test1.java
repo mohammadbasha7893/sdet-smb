@@ -12,11 +12,13 @@ public class test1 extends basetest {
 	
 
 	@Test
-	public void test1() {
+	public void test1() throws InterruptedException {
 		loginpage3 le=new loginpage3(driver);
 		le.aadhar();
+		le.pl(driver);
 		
 		
-
 	}
+
+	
 }
