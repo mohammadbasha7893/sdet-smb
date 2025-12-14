@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Editable Room Duty Roster</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #f0f0f0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #00ffff;
+    }
+    table {
+      width: 80%;
+      margin: 0 auto;
+      border-collapse: collapse;
+      background-color: #111;
+      color: #fff;
+    }
+    th, td {
+      padding: 12px;
+      border: 1px solid #444;
+      text-align: center;
+    }
+    th {
+      background-color: #222;
+      color: #00ffcc;
+    }
+    tr:nth-child(even) {
+      background-color: #1a1a1a;
+    }
+    td[contenteditable] {
+      outline: none;
+      cursor: text;
+    }
+  </style>
+</head>
+<body>
+  <h1>Weekly Duty Roster (Editable)</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Week</th>
+        <th>Cooking</th>
+        <th>Room Cleaning</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td contenteditable="true">Week 1</td>
+        <td contenteditable="true">Basha</td>
+        <td contenteditable="true">Sadiq</td>
+      </tr>
+      <tr>
+        <td contenteditable="true">Week 2</td>
+        <td contenteditable="true">Rafi</td>
+        <td contenteditable="true">Sameer</td>
+      </tr>
+      <tr>
+        <td contenteditable="true">Week 3</td>
+        <td contenteditable="true">Sadiq</td>
+        <td contenteditable="true">Basha</td>
+      </tr>
+      <tr>
+        <td contenteditable="true">Week 4</td>
+        <td contenteditable="true">Sameer</td>
+        <td contenteditable="true">Rafi</td>
+      </tr>
+      <tr>
+        <td contenteditable="true">Week 5</td>
+        <td contenteditable="true">Basha</td>
+        <td contenteditable="true">Sameer</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
