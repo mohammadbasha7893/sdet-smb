@@ -1,0 +1,51 @@
+package pom2;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class loginpage {
+
+	WebDriver driver;
+
+	// 1 first we have to create constructor
+
+	public loginpage(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+
+	// 2 here we are creating all the locators
+
+	
+
+	@FindBy(xpath = "(//input[@placeholder='Username'])[1]")
+	WebElement username;
+
+	@FindBy(xpath = "(//input[@placeholder='Password'])[1]")
+	WebElement password;
+
+	@FindBy(xpath = "//button[normalize-space()='Login']")
+	WebElement loginClick;
+
+	/*
+	 * @FindBy(xpath="") WebElement use;
+	 */
+	// 3here we are creating methods to intreacting elements
+
+	public void username_enter(String user) {
+		username.sendKeys(user);
+	}
+
+	public void password_enter(String pass) {
+		password.sendKeys(pass);
+
+	}
+
+	public void button() {
+		loginClick.click();
+
+	}
+
+}
