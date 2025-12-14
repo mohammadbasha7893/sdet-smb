@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Selenium Suite">
+    <test name="Day1 Tests">
+        <classes>
+            <class name="day1.Lab001">
+                <methods>
+                    <include name="browserLaunch" invocation-count="5"/>
+                    <include name="launchBrowser" invocation-count="5"/>
+                    <include name="tearDown" invocation-count="5"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
