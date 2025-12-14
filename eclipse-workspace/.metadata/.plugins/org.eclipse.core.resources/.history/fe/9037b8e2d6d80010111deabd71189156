@@ -1,0 +1,27 @@
+package pom3;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class loginpage3 {
+
+	WebDriver driver;
+
+	// constructors
+
+	loginpage3(WebDriver driver) {
+		this.driver = driver;
+	}
+
+	// locators
+
+	@FindBy(xpath = "//span[contains(text(),'My Aadhaar')]")
+	WebElement user;
+
+	// methods
+
+	public void aadhar() {
+		user.click();
+	}
+}

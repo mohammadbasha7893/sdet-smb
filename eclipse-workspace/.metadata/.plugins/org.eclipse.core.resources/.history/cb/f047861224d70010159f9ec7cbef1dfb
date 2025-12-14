@@ -1,0 +1,19 @@
+package pom1;
+
+import org.openqa.selenium.WebDriver;
+
+public class loginpage {
+
+	// constructor will intiaze the driver
+	WebDriver driver;
+
+	loginpage(WebDriver driver) {
+
+		this.driver = driver;
+	}
+
+	// locators all xapths
+
+	// action methods locating element action doing
+
+}
