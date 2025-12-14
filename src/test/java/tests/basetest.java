@@ -1,0 +1,26 @@
+package tests;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+
+public class basetest {
+    protected WebDriver driver;
+
+    @BeforeClass
+    public void setUp() {
+        // Initialize driver before tests
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.get("https://uidai.gov.in/"); // Example site
+    }
+
+    @AfterClass
+    public void tearDown() {
+        // Quit driver safely
+        if (driver != null) {
+            driver.quit();
+        }
+    }
+}

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="pom2.logintest">
+      <class name="pom3.test1">
         <methods>
-          <include name="browserlunch"/>
+          <include name="tearDown"/>
           <include name="test1"/>
-          <include name="browserquit"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- pom2.logintest -->
+      </class> <!-- pom3.test1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,0 +1,28 @@
+package pom3;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+
+public class basetest {
+	protected WebDriver driver;
+
+	@BeforeClass
+	public void setUp() {
+		// Initialize driver before tests
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get(
+				"https://www.tataaig.com/health-insurance?utm_source=Display&utm_medium=PerformanceMax&utm_campaign={LS_Health_Pmax_Floater_Jan25}--22103836502--&utm_content=&gad_source=1&gad_campaignid=22107538750&gbraid=0AAAAACQTGPPAs-wb_cgk_xD6hrtUHdmF5&gclid=CjwKCAiA3fnJBhAgEiwAyqmY5R319xmIzX57etIMVt97QP7KApefmKWCTug0YfVRcjjXp3ASqhrTIhoCV7IQAvD_BwE"); // Example
+																																																																																										// site
+	}
+
+	@AfterClass
+	public void tearDown() {
+		// Quit driver safely
+		if (driver != null) {
+			driver.quit();
+		}
+	}
+}
