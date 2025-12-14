@@ -1,0 +1,15 @@
+package pom3;
+
+import org.openqa.selenium.WebDriver;
+
+public class loginpage3 {
+	
+	public WebDriver driver;
+	
+
+	// constructors
+
+	// locators
+
+	// methods
+}

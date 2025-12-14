@@ -1,0 +1,16 @@
+package day1;
+
+import io.restassured.RestAssured;
+import static io.restassured.RestAssured.*;
+
+public class lab002 {
+	public static void main(String[] args) {
+		RestAssured.baseURI = "https://library-api.postmanlabs.com";
+		given().log().all().header("api-key", "postmanrulz").contentType("application/json").param("id",
+				"785ac7bf-21de-49a8-9786-6acd332cc611");
+
+		when().get("/books").then().log().all().assertThat().statusCode(200);
+
+	}
+
+}

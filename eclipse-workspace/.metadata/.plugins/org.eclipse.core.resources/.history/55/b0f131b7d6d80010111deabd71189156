@@ -1,0 +1,35 @@
+package pom3;
+
+import java.time.Duration;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+public class test1 {
+	WebDriver driver;
+
+	@BeforeClass
+	public void driverlunchorbrowser() {
+		 driver = new ChromeDriver(driver);
+		driver.get("https://uidai.gov.in/en/my-aadhaar");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+	}
+
+	@Test
+	public test1() {
+		loginpage3 le=new loginpage3(driver);
+		
+
+	}
+
+	@AfterClass
+	public void browserclose() {
+		driver.quit();
+	}
+
+}

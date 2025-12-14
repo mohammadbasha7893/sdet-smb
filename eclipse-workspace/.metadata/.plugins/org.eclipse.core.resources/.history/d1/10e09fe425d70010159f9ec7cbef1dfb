@@ -1,0 +1,30 @@
+package pom1;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class loginpage {
+
+	// constructor will intiaze the driver
+	WebDriver driver;
+
+	loginpage(WebDriver driver) {
+
+		this.driver = driver;
+	}
+
+	// locators all xapths
+	By Username = By.xpath("//input[@placeholder='Username']");
+	By password = By.xpath("//input[@placeholder='Password']");
+	By button = By.xpath("//button[normalize-space()='Login']");
+	
+	
+	// action methods locating element action doing
+	
+	public void setusername(String username) {
+		driver.findElement(Username).sendKeys(username);
+	}
+	
+	
+
+}

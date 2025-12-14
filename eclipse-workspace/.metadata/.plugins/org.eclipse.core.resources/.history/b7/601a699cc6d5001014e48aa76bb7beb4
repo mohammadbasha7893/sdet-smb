@@ -1,0 +1,15 @@
+package day1;
+
+import io.restassured.RestAssured;
+import static io.restassured.RestAssured.*;
+public class lab001 {
+public static void main(String[] args) {
+	RestAssured.baseURI="";
+	given().log().all().header("","")
+	.queryParam("", "")
+	.body("")
+	.when().post()
+	.then().assertThat().statusCode(200);
+	
+}
+}
